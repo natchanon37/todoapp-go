@@ -58,6 +58,7 @@ class ToDoList extends Component {
             let color = "yellow";
             let style = {
               wordWrap: "break-word",
+              color: "white",
             };
 
             if (item.status) {
@@ -150,25 +151,38 @@ class ToDoList extends Component {
   render() {
     return (
       <div className="flex flex-col justify-center p-4 w-full ">
-        <div className="flex justify-center m-4 text-3xl font-bold text-gray-900">
+        <div className="flex justify-center m-4 text-5xl font-extrabold text-transparent  bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
           TO DO LIST
         </div>
-        <div className="relative ">
-          <Form onSubmit={this.onSubmit} class="ui form">
-            <Input
-              type="text"
-              name="task"
-              onChange={this.onChange}
-              value={this.state.task}
-              fluid
-              placeholder="Create Task"
-            />
-            <div className="flex justify-center m-4">
-              <Button>Create Task..</Button>
-            </div>
-          </Form>
-        </div>
-        <div className="font-bold text-3xl ">{this.state.items}</div>
+        <Form
+          className="space-y-4"
+          onSubmit={this.onSubmit}
+          style={{
+            margin: "auto",
+            padding: "10px",
+            width: "60%",
+          }}
+        >
+          <Input
+            type="text"
+            name="task"
+            onChange={this.onChange}
+            value={this.state.task}
+            fluid
+            placeholder="Create Task"
+          />
+          <Button
+            style={{
+              backgroundColor: "#368cdb",
+              borderRadius: "10px",
+              color: "white",
+            }}
+          >
+            Create Task
+          </Button>
+        </Form>
+
+        <div className="font-bold mt-4">{this.state.items}</div>
       </div>
     );
   }

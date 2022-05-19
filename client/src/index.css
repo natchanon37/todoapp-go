@@ -9,35 +9,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right, rgb(26, 32, 41), rgb(17, 24, 39), rgb(0, 0, 0));
 }
 
-.ui.color1.button {
-  background-color: #008000;
-  color: #fff;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 4px;
-}
-
-.ui.color2.button {
-  background-color: #ffc40c;
-  color: #fff;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 4px;
-}
-
-.ui.color3.button {
-  background-color: #ff3d0c;
-  color: #fff;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 4px;
-}
-.card {
-  color: black;
-  font-weight: 300;
-  flex-direction: row;
+.ui.card,
+.ui.cards>.card {
+  background-color: #0e0e0f;
 }
 
 code {
