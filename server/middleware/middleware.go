@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"go-server/models"
+	"server/models"
 
 	"github.com/gorilla/mux"
 
